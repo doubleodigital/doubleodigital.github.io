@@ -1,223 +1,288 @@
-//Colours
-$green: #2ecc71;
-$red: #e74c3c;
-$blue: #3498db;
-$yellow: #f1c40f;
-$purple: #8e44ad;
-$turquoise: #1abc9c;
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700);
 
-// Reset and Layout Styles
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background: #2c3e50;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+/*
+.fonts {
+  font-family: 'Josefin Slab', serif;
 }
+*/
+
 body {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-}
-
-h1 {
-  color: $yellow;
-  font-size: 4rem;
-  text-transform: uppercase;
-  display: block;
-  width: 100%;
-  text-align: center;
-  
-  @media screen and (max-width: 600px) {
-    font-size: 3rem;
-  }
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: #333;
+  background: #ececec;
+  overflow-y: scroll;
 }
 
 p {
-  color: $yellow;
-  font-size: 1.2rem;
-  // text-transform: uppercase;
-  width: 100%;
-  padding: 20px;
-  text-align: center;
+  margin-bottom: 0.5em;
 }
 
-
-// Basic Button Style
-.btn {
-  box-sizing: border-box;
-  appearance: none;
-  background-color: transparent;
-  border: 2px solid $red;
-  border-radius: 0.6em;
-  color: $red;
-  cursor: pointer;
-  display: flex;
-  align-self: center;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1;
-  margin: 20px;
-  padding: 1.2em 2.8em;
+a,
+a:visited {
   text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
+  color: #00AE68;
+}
+
+.clear {
+  clear: both;
+}
+
+.pageTitle {
+  font-size: 2em;
   font-weight: 700;
-
-  &:hover,
-  &:focus {
-    color: #fff;
-    outline: 0;
-  }
+  text-transform: uppercase;
+  line-height: 1em;
+  color: #00AE68;
 }
 
-//BUTTON 1
-.first {
-  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-  &:hover {
-    box-shadow: 0 0 40px 40px $red inset;
-  }
+.pageSubTitle {
+  margin-bottom: 0.5em;
+  font-size: 1.3em;
+  font-weight: 700;
+  line-height: 1em;
+  color: #222;
 }
 
-//BUTTON 2
-.second {
-  border-radius: 3em;
-  border-color: $turquoise;
-  color: #fff;
-  background: {
-    image: linear-gradient(to right, 
-      transparentize($turquoise, 0.4),
-      transparentize($turquoise, 0.4) 5%,
-      $turquoise 5%, 
-      $turquoise 10%,
-      transparentize($turquoise, 0.4) 10%,
-      transparentize($turquoise, 0.4) 15%,
-      $turquoise 15%, 
-      $turquoise 20%,
-      transparentize($turquoise, 0.4) 20%,
-      transparentize($turquoise, 0.4) 25%,
-      $turquoise 25%, 
-      $turquoise 30%,
-      transparentize($turquoise, 0.4) 30%,
-      transparentize($turquoise, 0.4) 35%,
-      $turquoise 35%, 
-      $turquoise 40%,
-      transparentize($turquoise, 0.4) 40%,
-      transparentize($turquoise, 0.4) 45%,
-      $turquoise 45%, 
-      $turquoise 50%,
-      transparentize($turquoise, 0.4) 50%,
-      transparentize($turquoise, 0.4) 55%,
-      $turquoise 55%, 
-      $turquoise 60%,
-      transparentize($turquoise, 0.4) 60%,
-      transparentize($turquoise, 0.4) 65%,
-      $turquoise 65%, 
-      $turquoise 70%,
-      transparentize($turquoise, 0.4) 70%,
-      transparentize($turquoise, 0.4) 75%,
-      $turquoise 75%, 
-      $turquoise 80%,
-      transparentize($turquoise, 0.4) 80%,
-      transparentize($turquoise, 0.4) 85%,
-      $turquoise 85%, 
-      $turquoise 90%,
-      transparentize($turquoise, 0.4) 90%,
-      transparentize($turquoise, 0.4) 95%,
-      $turquoise 95%, 
-      $turquoise 100%);
-    position: 0 0;
-    size: 100%;
-  }
-  transition: background 300ms ease-in-out;
-  
-  &:hover {
-    background-position: 100px;
-  }
+.articleTitle {
+  font-size: 1.15em;
+  font-weight: 700;
+  line-height: 1em;
+  color: #222;
 }
 
-//BUTTON 3
-.third {
-  border-color: $blue;
-  color: #fff;
-  box-shadow: 0 0 40px 40px $blue inset, 0 0 0 0 $blue;
-  transition: all 150ms ease-in-out;
-  
-  &:hover {
-    box-shadow: 0 0 10px 0 $blue inset, 0 0 10px 4px $blue;
-  }
+.wrapper {
+  width: 600px;
+  margin: 20px auto;
 }
 
-// BUTTON 4
-.fourth {
-  // background: $yellow;
-  border-color: $yellow;
-  color: #fff;
-  background: {
-    image: linear-gradient(45deg,$yellow 50%, transparent 50%);
-    position: 100%;
-    size: 400%;
-  }
-  transition: background 300ms ease-in-out;
-  
-  &:hover {
-    background-position: 0;
-  }
+.container {
+  padding-top: 1em;
+  margin-top: 1em;
+  border-top: 
+    solid
+    1px
+    #CCC;
 }
 
-//BUTTON 5
-.fifth {
-  border-color: $purple;
-  // border: 0;
-  border-radius: 0;
-  color: $purple;
+a.button {
+  display: block;
   position: relative;
-  overflow: hidden;
-  z-index: 1;
-  transition: color 150ms ease-in-out;
-  
-  &:after {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 100%;
-    background: $purple;
-    z-index: -1;
-    transition: width 150ms ease-in-out;
-  }
-  
-  &:hover {
-    color: #fff;
-    &:after {
-      width: 110%;
-    }
-  }
+  float: left;
+  width: 120px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  color: #FFF;
+  border-radius: 5px;
+  transition: all 0.2s ;
 }
 
-//BUTTON 6
-.sixth {
-  border-radius: 3em;
-  border-color: $green;
-  color: $green;
-  background: {
-      image: linear-gradient(to bottom, transparent 50%, $green 50%);
-      position: 0% 0%;
-      size: 210%;
-  }
-  transition: background 150ms ease-in-out, color 150ms ease-in-out;
-  
-  &:hover {
-    color: #fff;
-    background-position: 0 100%;
-  }
+.btnBlueGreen {
+  background: #00AE68;
 }
+
+.btnLightBlue {
+  background: #5DC8CD;
+}
+
+.btnOrange {
+  background: #FFAA40;
+}
+
+.btnPurple {
+  background: #A74982;
+}
+
+/* FADE */
+.btnFade.btnBlueGreen:hover {
+  background: #21825B;
+}
+
+.btnFade.btnLightBlue:hover {
+  background: #01939A;
+}
+
+.btnFade.btnOrange:hover {
+  background: #FF8E00;
+}
+
+.btnFade.btnPurple:hover {
+  background: #6D184B;
+}
+
+/* 3D */
+.btnBlueGreen.btnPush {
+  box-shadow: 0px 5px 0px 0px #007144;
+}
+
+.btnLightBlue.btnPush {
+  box-shadow: 0px 5px 0px 0px #1E8185;
+}
+
+.btnOrange.btnPush {
+  box-shadow: 0px 5px 0px 0px #A66615;
+}
+
+.btnPurple.btnPush {
+  box-shadow: 0px 5px 0px 0px #6D184B;
+}
+
+.btnPush:hover {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.btnBlueGreen.btnPush:hover {
+  box-shadow: 0px 0px 0px 0px #007144;
+}
+
+.btnLightBlue.btnPush:hover {
+  box-shadow: 0px 0px 0px 0px #1E8185;
+}
+
+.btnOrange.btnPush:hover {
+  box-shadow: 0px 0px 0px 0px #A66615;
+}
+
+.btnPurple.btnPush:hover {
+  box-shadow: 0px 0px 0px 0px #6D184B;
+}
+
+/* BORDER */
+.btnBlueGreen.btnBorder {
+  box-shadow: 0px 0px 0px 0px #21825B;
+}
+
+.btnBlueGreen.btnBorder:hover {
+  box-shadow: 0px 0px 0px 5px #21825B;
+}
+
+.btnLightBlue.btnBorder {
+  box-shadow: 0px 0px 0px 0px #01939A;
+}
+
+.btnLightBlue.btnBorder:hover {
+  box-shadow: 0px 0px 0px 5px #01939A;
+}
+
+.btnOrange.btnBorder {
+  box-shadow: 0px 0px 0px 0px #A66615;
+}
+
+.btnOrange.btnBorder:hover {
+  box-shadow: 0px 0px 0px 5px #A66615;
+}
+
+.btnPurple.btnBorder {
+  box-shadow: 0px 0px 0px 0px #6D184B;
+}
+
+.btnPurple.btnBorder:hover {
+  box-shadow: 0px 0px 0px 5px #6D184B;
+}
+
+/* FLOAT */
+.btnFloat {
+  background: none;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.btnFloat:before {
+  content: 'Float';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 50px;
+  border-radius: 5px;
+  transition: all 0.2s ;
+}
+
+.btnBlueGreen.btnFloat:before {
+  background: #00AE68;
+}
+
+.btnLightBlue.btnFloat:before {
+  background: #5DC8CD;
+}
+
+.btnOrange.btnFloat:before {
+  background: #FFAA40;
+}
+
+.btnPurple.btnFloat:before {
+  background: #8D336A;
+}
+
+
+.btnFloat:before {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
+}
+
+.btnFloat:hover:before {
+  
+}
+
+.btnFloat:hover:before {
+  margin-top: -2px;
+  margin-left: 0px;
+  transform: scale(1.1,1.1);
+  -ms-transform: scale(1.1,1.1);
+  -webkit-transform: scale(1.1,1.1);
+  box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.25);
+}
+
+/* SLIDE */
+.btnSlide.btnBlueGreen {
+  background: 0;
+}
+
+.btnSlide .top {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 120px;
+  height: 50px;
+  background: #00AE68;
+  z-index: 10;
+  transition: all 0.2s ;
+  border-radius: 5px;
+}
+
+.btnSlide.btnBlueGreen .top {
+  background: #00AE68;
+}
+
+.btnSlide.btnLightBlue .top {
+  background: #5DC8CD;
+}
+
+.btnSlide.btnOrange .top {
+  background: #FFAA40;
+}
+
+.btnSlide.btnPurple .top {
+  background: #A74982;
+}
+
+.btnSlide .bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 50px;
+  color: #000;
+  z-index: 5;
+  border-radius: 5px;
+}
+
+.btnSlide:hover .top {
+  top: 40px;
+}
+
 
